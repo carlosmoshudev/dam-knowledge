@@ -3,15 +3,22 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 const isGithubPages = process.env.GITHUB_ACTIONS === 'true';
+const site = isGithubPages
+	? 'https://carlosmoshudev.github.io'
+	: (process.env.ASTRO_SITE_URL ?? 'http://localhost:4321');
 
 export default defineConfig({
-	site: isGithubPages
-		? 'https://carlosmoshudev.github.io'
-		: 'http://localhost:4123',
+	site,
 
-	base: isGithubPages 
-		? '/dam-knowledge' 
+	base: isGithubPages
+		? '/dam-knowledge'
 		: '/',
+
+	server: {
+		host: true,
+		port: 4321,
+		allowedHosts: ['localhost', '127.0.0.1', 'cali-home'],
+	},
 
 	integrations: [
 		starlight({

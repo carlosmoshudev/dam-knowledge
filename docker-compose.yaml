@@ -1,0 +1,27 @@
+services:
+  dam-knowledge:
+    image: node:24-alpine
+    container_name: dam-knowledge
+
+    working_dir: /app
+
+    environment:
+      ASTRO_DEV_BACKGROUND: "0"
+
+    command: >
+      sh -c "
+      npm ci &&
+      npm run dev -- --host 0.0.0.0
+      "
+
+    volumes:
+      - ./:/app
+      - node_modules:/app/node_modules
+
+    ports:
+      - "4321:4321"
+
+    restart: unless-stopped
+
+volumes:
+  node_modules:
