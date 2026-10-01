@@ -1,11 +1,9 @@
 ---
-title: Indice
+title: Índice
 description: Apuntes del módulo de Programación de 1.º de DAM.
 sidebar:
-  order: 1
+  order: 0
 ---
-
-# Programación
 
 Apuntes del módulo de **Programación de 1.º de DAM**.
 
@@ -21,4 +19,7 @@ Consulta la [Guía del módulo](./00-guia-del-modulo/) para revisar:
 
 ## Temario
 
-El contenido se organizará siguiendo el material oficial de la asignatura a medida que avance el curso.
+El contenido se organizará siguiendo el material oficial de la asignatura a
+medida que avance el curso.
+
+- [Unidad 1: Conceptos básicos de Java](./unidad-01/)

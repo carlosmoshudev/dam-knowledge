@@ -1,4 +1,13 @@
-# UD1: Conceptos Básicos de Programación en Java
+---
+title: 'Unidad 1: Conceptos básicos de Java'
+description: Fundamentos de programación, estructura de un programa Java, tipos de datos, operadores y entrada y salida por consola.
+sidebar:
+  order: 2
+  label: 'Unidad 1: Conceptos básicos de Java'
+---
+
+En esta unidad se presentan los fundamentos de Java y las herramientas
+necesarias para escribir, compilar y ejecutar los primeros programas.
 
 ## 1. Introducción a la Programación y al Lenguaje Java
 * **Programación**: Proceso de escribir instrucciones detalladas para que un ordenador ejecute tareas específicas (creación de software).
@@ -48,7 +57,7 @@
   * Nombres asignados a variables, clases y métodos.
   * Pueden contener letras (mayúsculas/minúsculas), números, `_` y `$`.
   * **No** pueden empezar por número ni coincidir con palabras reservadas.
-  * Java es strictly **sensible a mayúsculas y minúsculas** (*case-sensitive*).
+  * Java es estrictamente **sensible a mayúsculas y minúsculas** (*case-sensitive*).
 * **Comentarios**:
   * Una línea: `// comentario`
   * Multilínea: `/* comentario */`
@@ -72,14 +81,13 @@
     * `float` (32 bits, requiere sufijo `f` o `F`, ej. `15.8f`)
     * `double` (64 bits, tipo decimal por defecto, ej. `3.1416`)
   * **Caracteres**:
-    * `char` (16 bits, codificación Unicode, valores de 0 a 65,535). Se escriben entre comillas simples (ej. `'a'`, `'a'`).
+    * `char` (16 bits, codificación Unicode, valores de 0 a 65 535). Se escriben entre comillas simples (ej. `'a'`, `'ñ'`).
   * **Booleanos**:
     * `boolean` (valores `true` o `false`).
 * **Cadenas de Texto (`String`)**:
   * No es un tipo primitivo, es una clase de objeto (`java.lang.String`).
   * Se encierran entre comillas dobles (ej. `"Hola mundo"`).
-  * Admiten **secuencias de escape**: `
-` (salto de línea), `	` (tabulador), `"` (comilla doble), `\` (barra invertida).
+  * Admiten **secuencias de escape**: `\n` (salto de línea), `\t` (tabulador), `\"` (comilla doble), `\\` (barra invertida).
 * **Constantes**:
   * Variables cuyo valor no cambia durante la ejecución. Se definen con la palabra clave `final` (ej. `final double PI = 3.141592;`).
   * Por convención, sus identificadores se escriben en MAYÚSCULAS.
@@ -121,8 +129,7 @@
     * `teclado.nextLine()`: Lee una línea completa de texto como `String`.
     * `teclado.nextLine().charAt(0)`: Lee el primer carácter introducido.
 * **Solución al "Bug" de Lectura con `Scanner`**:
-  * Al leer un valor numérico (`nextInt()`, `nextDouble()`) y posteriormente llamar a `nextLine()`, este último captura el retorno de carro (`
-` / `<ENTER>`) restante y devuelve una cadena vacía.
+  * Al leer un valor numérico (`nextInt()`, `nextDouble()`) y posteriormente llamar a `nextLine()`, este último captura el retorno de carro (`\n` / `<ENTER>`) restante y devuelve una cadena vacía.
   * **Soluciones**:
     1. Añadir una llamada intermedia de limpieza: `teclado.nextLine();`.
     2. Leer siempre con `nextLine()` y convertir la cadena al tipo numérico deseado:

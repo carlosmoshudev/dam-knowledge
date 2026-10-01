@@ -5,8 +5,6 @@ sidebar:
   order: 1
 ---
 
-# Guía del módulo
-
 Información práctica sobre el funcionamiento y la evaluación del módulo de **Programación**.
 
 ## Tutorías
